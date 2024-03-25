@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+88888888888888888888888888888888888888888888888888888
+8888"""""""""""""""8888888888888888888888888888888888
+8888               8888888888888888888888888888888888
+8888               8888888888888888888888888888888888
+8888               888888888888888888888888888888888"
+8888aaaaaaaaaaaaaaa888888888888888888888888888888888a
+88888888888888888888888888888888888888888888888888888
+88888888888888888888888888888888888888888888888888888
+88888888888888888888888888888888888888888888888888888
+88888888888888888888888":::::"88888888888888888888888
+888888888888888888888::;gPPRg;::888888888888888888888
+88888888888888888888::dP'   `Yb::88888888888888888888
+88888888888888888888::8)     (8::88888888888888888888
+88888888888888888888;:Yb     dP:;88( )888888888888888
+888888888888888888888;:"8ggg8":;888888888888888888888
+88888888888888888888888aa:::aa88888888888888888888888
+88888888888888888888888888888888888888888888888888888
+88888888888888888888888888888888888888888888888888888
+88888888888888888888888888"88888888888888888888888888
+8888888888888888888888888:::8888888888888888888888888
+8888888888888888888888888:::8888888888888888888888888
+8888888888888888888888888:::8888888888888888888888888
+8888888888888888888888888:::8888888888888888888888888
+8888888888888888888888888:::8888888888888888888888888
+88888888888888888888888888a88888888888888888888888888
+"""""""""""""""""""' `"""""""""' `"""""""""""""""""""
+-->
+<html lang="en">
+<head>
+<link rel="stylesheet" href="./inc/style.css">
+<title>GOTO 10</title>
+</head>
+<body>
+<hr>
+<div id="header">
+	</B>
+	<!--
+	 1 space : &nbsp;
+	 2 spaces : &ensp;
+	 4 spaces : &emsp;
+	-->
+		&emsp; &gt; 10 PRINT "Hello World"<BR>
+		&emsp; &gt; 20 GOTO 10<BR>
+		&emsp; &gt; RUN<BR>
+		&emsp; &gt; Hello World<BR>
+		&emsp; &gt; Hello World<BR>
+	</B>
+</div>
+<hr>
+<div id="menu">
+  <H3>
+	<a href="./index.html">[Home]</a> 
+	<!--
+  <a href="">[Misc]</a> 
+	<a href="">[Linux]</a> 
+	<a href="">[Cybersecurity]</a>
+  -->
+</H2>
+</div>
+<BR>
+<div id="body">
+    <H1>How to keep using old and cheap hardware. Or how I bricked my QNAP and moved on to Debian</H1>
+    <P><I>25 February 2022</I></P>
+    <p>I love pushing old and cheap hardware to the limits. It's not just about computer hardware, but most other aspects of my material assets.
+      I am neither rich nor poor. I have a good job and healthy personal finances, but that does not mean that I like to spend more on what I need than I must.
+      Whether it's building a surround system or making the car work as long as possible, I love doing research online and finding smart and sustainable solutions.
+      I prefer to buy products that last long and that I can maintain.
+      If I can build a home stereo with a vinyl player that plays 90% as good as the state-of-the-art Rega player at 20% of the cost by handpicking smart buys - I simply love it!</p>
+      <p>So, for 13 years I have been depending on a QNAP running as a <a href="https://en.wikipedia.org/wiki/Network-attached_storage">NAS</a> for backups at home. The first few years I also used it as a media center, but as Netflix, HBO and Amazon Prime has emerged this function is no longer needed.</p>
+      <p>The first QNAP I purchased back in 2009 was a QNAP TS-209 Pro. When writing this piece, I dug into some old emails. I had completely forgotten about it, but I now see that the first device I received did not work right out of the box. I returned the item and got a replacement. Then it looks like it worked fine for two years, but then the fan broke. QNAP was very professional and quickly sent me a new fan that I switched out myself. Almost on the day five years after I bought it and when the warranty expired it completely died.</p>
+      <p><a href="./media/qnap1.jpg"><img src="./media/qnap1.jpg" alt="QNAP TS-210" width="600"></a></p>
+      <p>So in 2014 I purchased a new QNAP TS-210 with 2 x Seagate 750Gb disks that I put up in <a href="https://en.wikipedia.org/wiki/RAID">RAID 1</a>. The main use for the NAS at this point was to function as a Time Machine backup storage for my family’s shared iMac.
+      In 2019 one of the harddrives died on me. Also, the QNAP was beginning to be so cluttered by five years of software updates. Trying to open the web-based admin panel took for ages, so I just put it aside. At this time both my wife and my kids were deep in the Apple world with iPhones, Macs, and iPads so I gave in and purchased a big, shared iCloud subscription. I know, I know - Apple is Evil. But try arguing with better halves and teenagers.</p>
+      <p>The QNAP lived in a box in the basement shed for almost three years, but this week I took it back out for some sunlight and wiped the dust off it.
+      The reason was that I some time ago read an excellent article by Martin Michlmayr on how to <a href="https://www.cyrius.com/debian/kirkwood/qnap/ts-219/install/">Installing Debian on QNAP TS-21x/TS-22x</a>. Now it was finally time to give it a try.</p>
+      <p><a href="./media/qnap3.jpg"><img src="./media/qnap3.jpg" alt="Looking into the QNAP TS-210" width="600"></a></p>
+      <p>So, I put power on the old QNAP again and booted it. Took ages and the status light kept blinking green/red as before.
+      I read Martin's instructions twice and then connected to it with ssh and started going through the steps as described.
+      Everything looked like it was working fine. I got all the right feedback on the screen and the Debian installer finished as it should.</p>
+      <p>But when the device rebooted nothing worked. I mean nothing except that I got lights showing it had power.<br>I could not connect via the web-based admin panel.<br>I could not even detect it's connection to the router and getting an ip, so I knew I was in trouble.<br>I tried the described factory reset by inserting a paperclip into a reset hole in the back. No response.<br>What could have gone wrong?<br>I have no final answer, but I suspect that it is related to the fact that I did not remove the corrupted harddrive before starting the installation of Debian.</p>
+      <p>So, I removed the bad harddrive and tried booting again, but still no success.</p>
+      <p><strong>I had officially bricked my QNAP.</strong></p>
+      <p>Or had I?</p>
+      <p>I mean, I still got a power indicator so the device could not be a 100% destroyed. So, I started searching online (notice I say searching, not Googling. I use DuckDuckGo) and I found a couple of interesting articles about how to recover a device by writing a firmware image to the flash ramdisk. But the articles where old and the links to the need ISO images were not working.</p>
+      <p>So, I reached out to QNAP. I got a reply within hours with the much need link to the ISO. Let me say right now that I absolutely applaud their customer service. They also kept the ticket open to await my response on success or failure.</p>
+      <p>But how to get an ISO onto a CD in 2022? It has been ages since you got a laptop with a CD or DVD writer included. There is not even room for such a thing in the newer, slimmer laptops.
+      Luckily, I have my stash :-)<br>My job supplies me with a new laptop of choice every three years. I can choose from 8-10 different Windows or Linux PCs, or Macbooks.
+      Also, my workplace has a policy of not having to return the old computers as they encourages us to play around, tinker and experiment.
+      So, I found the trusted old workhorse - the Thinkpad T60. The wannabe-Youtubers and hipsters’ computer of choice!</p>
+      <p><a href="./media/qnap5.jpg"><img src="./media/qnap5.jpg" alt="Thinkpad T60 running antiX Linux" width="600"></a></p>
+      <p>I fired up the machine running antiX Linux, downloaded the ISO, inserted an empty CD, opened a terminal windows and ran <code>&quot;dd if=/dev/sr0 of=path/filename.iso bs=1M&quot;</code>
+      With the ISO burned to the CD I followed <a href="https://wiki.qnap.com/wiki/Firmware_Recovery#Instructions_for_NAS_Recovery_-_Method_2_.28Live_CD.29">the firmware recovery procedure from QNAP</a>. Note that this newer procedure actually contains working links to download the ISO.</p>
+      <p><a href="./media/qnap6.jpg"><img src="./media/qnap6.jpg" alt="Thinkpad T60 ofcourse has a CD burner" width="600"></a></p>
+      <ol>
+      <li>First I turned off the T60 and the QNAP.</li>
+      <li>Remove all harddrives from the QNAP.</li>
+      <li>Then I inserted the CD into the T60 and turned it on while pressing the blue ThinkVantage button (I miss this button on the newer Lenovos). This took me to the BIOS where I could choose to boot from the CD.</li>
+      <li>The CD was evidently based on Ubuntu and it booted correctly to a command prompt. You do not need to login or enter any commands.</li>
+      <li>At this time I connected the T60 and the QNAP directly with each other using a network cable.<br>
+      <a href="./media/qnap7.jpg"><img src="./media/qnap7.jpg" alt="QNAP and T60 directly connected with a network cable" width="600"></a></li>
+      <li>While holding a paperclip in the reset hole I turned on the QNAP, and kept the paperclip pushed.</li>
+      <li>In about 6-7 seconds I got two short beeps and the status light started flashing red and green, and then turning red.</li>
+      <li>At this point you remove the paperclip and sit back and wait.</li>
+      <li>The software on the ISO does it magic. The pc does not give you any feedback while running the program. Do not panic. Do not touch. Lean back and leave the QNAP and laptop alone.</li>
+      <li>All in all this takes 5-8 minutes. Then it reboots one or two times, and finally you get a long beep and the QNAP status light turn green.</li>
+      <li>Time to check the router. Now I see I have a new device connected with an ip address.</li>
+      <li>In a web browser go to the ip address. The QNAP is running a webserver service and you should get a webpage where you can update your firmware. Do that.</li>
+      <li>When the firmware update is done, turn the QNAP off again.</li>
+      <li>Now was the time to reinstall the harddisk. This time only the good one. The bad one has been retired to be a shooting target.</li>
+      <li>With the harddisk installed I turned the QNAP back on again.</li>
+      </ol>
+      <p>When the QNAP status light turned green I went back to <a href="https://www.cyrius.com/debian/kirkwood/qnap/ts-219/install/">Martin's instructions</a> for installing Debian and followed every step once more.</p>
+      <p>This time it worked!</p>
+      <p><em>Note - Debian 10 is the last release to support these devices. Debian 11 (bullseye) is not supported.</em>
+      Also on Martin's website there are some other nice tips and tricks. For example how to do some fan control, schedule power on or automatic power on. <a href="https://www.cyrius.com/debian/kirkwood/qnap/ts-219/tips/">Check it out</a>.</p>
+      <p>The broken harddisk must have been the reason for everything failing and the QNAP bricking the first time. I have no other explanation.</p>
+      <p><a href="./media/qnap8.jpg"><img src="./media/qnap8.jpg" alt="Debian running on QNAP TS-210" width="600"></a></p>
+      <p>So now I have a fresh Debian installation in my QNAP equipped with a 750Gb hard drive.<br>I just have to figure out what to do with it :-)</p>
+      <p>More to follow.....maybe.....</p>
+</div>
+</body>
+</html>

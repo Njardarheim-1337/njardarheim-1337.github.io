@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<!--
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+88888888888888888888888888888888888888888888888888888
+8888"""""""""""""""8888888888888888888888888888888888
+8888               8888888888888888888888888888888888
+8888               8888888888888888888888888888888888
+8888               888888888888888888888888888888888"
+8888aaaaaaaaaaaaaaa888888888888888888888888888888888a
+88888888888888888888888888888888888888888888888888888
+88888888888888888888888888888888888888888888888888888
+88888888888888888888888888888888888888888888888888888
+88888888888888888888888":::::"88888888888888888888888
+888888888888888888888::;gPPRg;::888888888888888888888
+88888888888888888888::dP'   `Yb::88888888888888888888
+88888888888888888888::8)     (8::88888888888888888888
+88888888888888888888;:Yb     dP:;88( )888888888888888
+888888888888888888888;:"8ggg8":;888888888888888888888
+88888888888888888888888aa:::aa88888888888888888888888
+88888888888888888888888888888888888888888888888888888
+88888888888888888888888888888888888888888888888888888
+88888888888888888888888888"88888888888888888888888888
+8888888888888888888888888:::8888888888888888888888888
+8888888888888888888888888:::8888888888888888888888888
+8888888888888888888888888:::8888888888888888888888888
+8888888888888888888888888:::8888888888888888888888888
+8888888888888888888888888:::8888888888888888888888888
+88888888888888888888888888a88888888888888888888888888
+"""""""""""""""""""' `"""""""""' `"""""""""""""""""""
+-->
+<html lang="en">
+<head>
+<link rel="stylesheet" href="./inc/style.css">
+<title>GOTO 10</title>
+</head>
+<body>
+<hr>
+<div id="header">
+	</B>
+	<!--
+	 1 space : &nbsp;
+	 2 spaces : &ensp;
+	 4 spaces : &emsp;
+	-->
+		&emsp; &gt; 10 PRINT "Hello World"<BR>
+		&emsp; &gt; 20 GOTO 10<BR>
+		&emsp; &gt; RUN<BR>
+		&emsp; &gt; Hello World<BR>
+		&emsp; &gt; Hello World<BR>
+	</B>
+</div>
+<hr>
+<div id="menu">
+  <H3>
+	<a href="./index.html">[Home]</a> 
+	<!--
+  <a href="">[Misc]</a> 
+	<a href="">[Linux]</a> 
+	<a href="">[Cybersecurity]</a>
+  -->
+</H2>
+</div>
+<BR>
+<div id="body">
+  <DIV>
+    <H1>How I run this site - part 2 of 7 - GitHub</H1>
+    <P><I>20 November 2020</I></P>
+    <P>So how do I manage files and versions?<BR>
+<BR>
+I work from several different computers from different places.<BR>
+It is always a challenge to know how to always work with the latest version of a file. How to keep everything up to date on all computers.<BR>
+Additionally, you may want to save different versions of files for recordkeeping.<BR>
+<BR>
+The simple and obvious choice is to use Git implemented by GitHub.<BR>
+Learn more about <a href="https://en.wikipedia.org/wiki/Git">Git at Wikipedia</A>.
+GitHub is free for personal projects, and you find it at <a href="https://github.com/">github.com</a><BR>
+<BR>
+You then have a centralized repository with all the files in the latest version and earlier versions.<BR>
+<BR>
+GitHub is easy to use, and you do not need many commands to work with it.<BR>
+Github is available for most platforms; Windows, Mac and Linux. I run all these operating systems myself.<BR>
+<BR>
+After creating a free user profile on GitHub, you can create a project.<BR>
+<BR>
+To set it up on a new computer, navigate to the desired directory in the terminal and type:<BR>
+<blockquote>git clone "url to project"</blockquote>
+For example:<BR>
+<blockquote>git clone https://github.com/github/training-kit.git</blockquote>
+<BR>
+This downloads all files with the defined directory structure.<BR>
+<BR>
+Next time you work on the project, go to the same directory and just type in the terminal:<BR>
+<blockquote>git pull</blockquote>
+That's it! Now your local repository is 100% in sync.<BR>
+<BR>
+When you have finished working on the files and want them uploaded to the GitHub repository, you need to commit the files and then upload them.<BR>
+Since I work alone with this website, I do not have to think about whether others have checked out files etc.<BR>
+<BR>
+You can do this in (at least) three different ways.<BR>
+<h2>1. Manually in the terminal</h2>
+As before, navigate to your local GitHub directory in the terminal and type:<BR>
+<blockquote>git add.<BR>
+git commit -m "your message here"<BR>
+git push</blockquote><BR>
+<BR>
+<h2>2. Create a bash script</h2>
+To avoid writing all three "add", "commit" and "push" each time, create a simple bash script or create an alias (see bulletpoint 3 below).<BR>
+<BR>
+Open the terminal and type:<BR>
+<blockquote>touch gitpush.sh<BR>
+vim gitpush.sh</blockquote>
+<BR>
+In Vim:
+Press I for insert mode and type these four lines:<BR>
+<blockquote>#!/bin/bash<BR>
+git add.<BR>
+git commit -m "'$ *'"<BR>
+git push</blockquote>
+<BR>
+Press Esc, then press :wq (to write and quit).<BR>
+<BR>
+And then make the file executable with:<BR>
+<blockquote>chmod +x gitpush.sh</blockquote>
+<BR>
+Put the file in a directory located in your path. For example the /bin directory.<BR>
+<BR>
+Then just type:<BR>
+<blockquote>./gitpush.sh My comment for this version</blockquote>
+<BR>
+<h2>3. Make an alias</h2>
+This is the way I roll.<BR>
+Most people have their aliases in either ~/.bashrc or ~/.bash_aliases<BR>
+<BR>
+Open the file as follows:<BR>
+<blockquote>vim ~/.bash_aliases</blockquote>
+<BR>
+In Vim:<BR>
+Press I for Insert mode and type these lines:<BR>
+<blockquote>gitpush_function () {<BR>
+&emsp;&emsp;&emsp;	git add.<BR>
+&emsp;&emsp;&emsp;	git commit -m "$ *"<BR>
+&emsp;&emsp;&emsp;	git push<BR>
+}<BR>
+alias gitpush = gitpush_function</blockquote>
+<BR>
+Press Esc, then press :wq (to write and quit).<BR>
+<BR>
+To get the new alias valid, type in the terminal:<BR>
+<blockquote>source ~/.bashrc</blockquote>
+<BR>
+So in the future you now just write:<BR>
+<blockquote>gitpush My comment for this version</blockquote>
+<BR>
+<BR>
+<BR>
+<B>That was it!</B><BR>
+<BR>
+PS! You can find simple explanations of all the Git commands here: <a href="https://github.com/git-guides/">Git Guides</a><BR>
+<BR>
+The next time I have to work with the web pages - no matter which computer - I run the same routine. Starts the computer, opens the terminal and navigates to my git directory, and then "git pull".<BR>
+<BR>
+Do the work I'm going to do.<BR>
+<BR>
+And then I finish my work by just typing "gitpush This is my comment".<BR>
+<BR>
+<BR>
+This was part 2 of 7. Have you read <a href="./philosophy.html">part 1</a>? Part 3 is coming soon and will cover how I write my text.
+    </P>
+  </DIV>
+</div>
+</body>
+</html>

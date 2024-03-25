@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+88888888888888888888888888888888888888888888888888888
+8888"""""""""""""""8888888888888888888888888888888888
+8888               8888888888888888888888888888888888
+8888               8888888888888888888888888888888888
+8888               888888888888888888888888888888888"
+8888aaaaaaaaaaaaaaa888888888888888888888888888888888a
+88888888888888888888888888888888888888888888888888888
+88888888888888888888888888888888888888888888888888888
+88888888888888888888888888888888888888888888888888888
+88888888888888888888888":::::"88888888888888888888888
+888888888888888888888::;gPPRg;::888888888888888888888
+88888888888888888888::dP'   `Yb::88888888888888888888
+88888888888888888888::8)     (8::88888888888888888888
+88888888888888888888;:Yb     dP:;88( )888888888888888
+888888888888888888888;:"8ggg8":;888888888888888888888
+88888888888888888888888aa:::aa88888888888888888888888
+88888888888888888888888888888888888888888888888888888
+88888888888888888888888888888888888888888888888888888
+88888888888888888888888888"88888888888888888888888888
+8888888888888888888888888:::8888888888888888888888888
+8888888888888888888888888:::8888888888888888888888888
+8888888888888888888888888:::8888888888888888888888888
+8888888888888888888888888:::8888888888888888888888888
+8888888888888888888888888:::8888888888888888888888888
+88888888888888888888888888a88888888888888888888888888
+"""""""""""""""""""' `"""""""""' `"""""""""""""""""""
+-->
+<html lang="en">
+<head>
+<link rel="stylesheet" href="./inc/style.css">
+<title>GOTO 10</title>
+</head>
+<body>
+<hr>
+<div id="header">
+	</B>
+	<!--
+	 1 space : &nbsp;
+	 2 spaces : &ensp;
+	 4 spaces : &emsp;
+	-->
+		&emsp; &gt; 10 PRINT "Hello World"<BR>
+		&emsp; &gt; 20 GOTO 10<BR>
+		&emsp; &gt; RUN<BR>
+		&emsp; &gt; Hello World<BR>
+		&emsp; &gt; Hello World<BR>
+	</B>
+</div>
+<hr>
+<div id="menu">
+  <H3>
+	<a href="./index.html">[Home]</a> 
+	<!--
+  <a href="">[Misc]</a> 
+	<a href="">[Linux]</a> 
+	<a href="">[Cybersecurity]</a>
+  -->
+</H2>
+</div>
+<BR>
+<div id="body">
+<h1 id="how-i-run-this-site---part-4-of-7---aspell">How I run this site - part 4 of 7 - Aspell</h1>
+<p><em>24 May 2021</em></p>
+<p>So I have told you <a href="./philosophy.html">the philosophy behind this website</a>, how I <a href="./github.html">source control the files with Git</a> and how I <a href="./markdown.html">write and format the text using Markdown</a>. But there are still some steps left before I can publish the finished HTML files.</p>
+<p>The next step is spellchecking.</p>
+<p>For this I use Aspell. Aspell is a Free and Open Source (FOSS) spell checker <a href="http://aspell.net" class="uri">http://aspell.net</a>. If you run a Linux distro Aspell is most surely installed. You can check by running the following command in you terminal: <code>which aspell</code> Should Aspell for some reason be missing you will find installation instructions on their website.</p>
+<p>Aspell comes with a big variety of options, commands and filters. You can for example specify if the file is a Perl, LaTex or HTML file. And you can of course specify the language.</p>
+<p>I run it simple. I just check one file for English in interactive mode. It is just like running a spell check in Microsoft Word or LibreOffice.</p>
+<p>The syntax for this is (md is Markdown file extension): <code>aspell check file.md</code></p>
+<p>When checking your file you will get suggestions for errors, you can change/change all, ignore/ignore all or for example add a custom word to your personal dictionary.</p>
+<p>Next time I will show you how to automatically create a HTML page from your Markdown file.</p>
+</div>
+</body>
+</html>
