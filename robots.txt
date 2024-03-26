@@ -1,4 +1,3 @@
 User-agent: *
 Disallow: /inc/
 Disallow: /media/
-Disallow: /selfoss/

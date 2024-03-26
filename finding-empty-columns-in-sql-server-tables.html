@@ -1,478 +1,513 @@
-<!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-<link rel="stylesheet" href="./inc/style.css">
-<title>GOTO 10</title>
-</head>
-<body>
-<hr>
-<div id="header">
-	
-	<!--
+<!doctype html>
+<!--
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+88888888888888888888888888888888888888888888888888888
+8888"""""""""""""""8888888888888888888888888888888888
+8888               8888888888888888888888888888888888
+8888               8888888888888888888888888888888888
+8888               888888888888888888888888888888888"
+8888aaaaaaaaaaaaaaa888888888888888888888888888888888a
+88888888888888888888888888888888888888888888888888888
+88888888888888888888888888888888888888888888888888888
+88888888888888888888888888888888888888888888888888888
+88888888888888888888888":::::"88888888888888888888888
+888888888888888888888::;gPPRg;::888888888888888888888
+88888888888888888888::dP'   `Yb::88888888888888888888
+88888888888888888888::8)     (8::88888888888888888888
+88888888888888888888;:Yb     dP:;88( )888888888888888
+888888888888888888888;:"8ggg8":;888888888888888888888
+88888888888888888888888aa:::aa88888888888888888888888
+88888888888888888888888888888888888888888888888888888
+88888888888888888888888888888888888888888888888888888
+88888888888888888888888888"88888888888888888888888888
+8888888888888888888888888:::8888888888888888888888888
+8888888888888888888888888:::8888888888888888888888888
+8888888888888888888888888:::8888888888888888888888888
+8888888888888888888888888:::8888888888888888888888888
+8888888888888888888888888:::8888888888888888888888888
+88888888888888888888888888a88888888888888888888888888
+"""""""""""""""""""' `"""""""""' `"""""""""""""""""""
+-->
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./inc/style.css" />
+    <title>GOTO 10</title>
+  </head>
+
+  <body>
+    <div class="heading">
+      <h1>
+        <!--
 	 1 space : &nbsp;
 	 2 spaces : &ensp;
 	 4 spaces : &emsp;
 	-->
-		&#8195; &gt; 10 PRINT "Hello World"<br>
-		&#8195; &gt; 20 GOTO 10<br>
-		&#8195; &gt; RUN<br>
-		&#8195; &gt; Hello World<br>
-		&#8195; &gt; Hello World<br>
-	
-</div>
-<hr>
-<div id="menu">
-  <h3>
-	<!-- Se layout hos Solene : https://dataswamp.org/~solene/2022-07-01-oldcomputerchallenge-v2-rtc.html -->
-	<!-- Lag egen bakgrunnsfarge for codesnutter -->
-	<a href="https://goto10.xyz/index.html">[Index]</a> <!-- Bare dato og overskrifter -->
-	<!--
-  <a href="">[Everything]</a> med kort resyme
-	<a href="">[Tags]</a> 
-	<a href="">[RSS]</a>
+        &emsp; &gt; 10 PRINT "Hello World"<br />
+        &emsp; &gt; 20 GOTO 10<br />
+        &emsp; &gt; RUN<br />
+        &emsp; &gt; Hello World<br />
+        &emsp; &gt; Hello World<br />
+      </h1>
+    </div>
+
+    <div class="content">
+      <div id="menu">
+        <h3>
+          <a href="./index.html">[Home]</a>
+          <!--
+  <a href="">[Misc]</a> 
+	<a href="">[Linux]</a> 
+	<a href="">[Cybersecurity]</a>
   -->
-</h3>
-</div>
-<br>
-<div id="body">
-<h1 id="finding-empty-columns-in-sql-server-tables">Finding empty columns in SQL Server tables</h1>
-<p><em>11 April 2023</em></p>
-<p>Sometimes you have database tables with columns that have no values.</p>
-<p>In this specific case, we are exposing the tables to our users as views. That gives us the option to exclude the columns with no values or interest for the users.</p>
-<p>But it can be a time-consuming task to check every row in every column in every table for empty ones.</p>
-<p>This task can be performed by running this script that I have assembled. Simply replace the value "CUSTOMER" in the first row of the script with the name of the table you want to check.</p>
-<p>Here is an example table "CUSTOMER" with 25 rows of data. Notice that the column "GRADE" only contains NULL values and the column "PHONE_NO" has empty values (""). My script will cover both cases.</p>
-<p><a href="./media/customer-table.jpg"><img src="./media/customer-table.jpg" alt="CUSTOMER table" width="600"></a></p>
+        </h3>
+      </div>
+      <br />
+      <div id="body">
+        <h1 id="finding-empty-columns-in-sql-server-tables">
+          Finding empty columns in SQL Server tables
+        </h1>
+        <p>
+          <i>11 April 2023</i>
+        </p>
+        <p>
+          Sometimes you have database tables with columns that have no values.
+        </p>
+        <p>
+          In this specific case, we are exposing the tables to our users as
+          views. That gives us the option to exclude the columns with no values
+          or interest for the users.
+        </p>
+        <p>
+          But it can be a time-consuming task to check every row in every column
+          in every table for empty ones.
+        </p>
+        <p>
+          This task can be performed by running this script that I have
+          assembled. Simply replace the value "CUSTOMER" in the first row of the
+          script with the name of the table you want to check.
+        </p>
+        <p>
+          Here is an example table "CUSTOMER" with 25 rows of data. Notice that
+          the column "GRADE" only contains NULL values and the column "PHONE_NO"
+          has empty values (""). My script will cover both cases.
+        </p>
+        <p>
+          <a href="./media/customer-table.jpg"
+            ><img
+              src="./media/customer-table.jpg"
+              alt="CUSTOMER table"
+              width="600"
+          /></a>
+        </p>
 
-<table>
-  <thead>
-    <tr>
-      <th>CUST_CODE</th>
-      <th>CUST_NAME</th>
-      <th>CUST_CITY</th>
-      <th>WORKING_AREA</th>
-      <th>CUST_COUNTRY</th>
-      <th>GRADE</th>
-      <th>OPENING_AMT</th>
-      <th>RECEIVE_AMT</th>
-      <th>PAYMENT_AMT</th>
-      <th>OUTSTANDING_AMT</th>
-      <th>PHONE_NO</th>
-      <th>AGENT_CODE</th>
-    </tr>
-  </thead>
-  <tbody>
- <tr>
-  <td>C00001</td>
-  <td>Micheal</td>
-  <td>New York</td>
-  <td>New York</td>
-  <td>USA</td>
-  <td>NULL</td>
-  <td>3000.00</td>
-  <td>5000.00</td>
-  <td>2000.00</td>
-  <td>6000.00</td>
-  <td></td>
-  <td>A008</td>
-  <td></td>
- </tr>
- <tr>
-  <td>C00002</td>
-  <td>Bolt</td>
-  <td>New York</td>
-  <td>New York</td>
-  <td>USA</td>
-  <td>NULL</td>
-  <td>5000.00</td>
-  <td>7000.00</td>
-  <td>9000.00</td>
-  <td>3000.00</td>
-  <td></td>
-  <td>A008</td>
-  <td></td>
- </tr>
- <tr>
-  <td>C00003</td>
-  <td>Martin</td>
-  <td>Torento<</td>
-  <td>Torento</td>
-  <td>Canada</td>
-  <td>NULL</td>
-  <td>8000.00</td>
-  <td>7000.00</td>
-  <td>7000.00</td>
-  <td>8000.00</td>
-  <td></td>
-  <td>A004</td>
-  <td></td>
- </tr>
- <tr>
-  <td>C00004</td>
-  <td>Winston</td>
-  <td>Brisban</td>
-  <td>Brisban</td>
-  <td>Australia</td>
-  <td>NULL</td>
-  <td>5000.00</td>
-  <td>8000.00</td>
-  <td>7000.00</td>
-  <td>6000.00</td>
-  <td></td>
-  <td>A005</td>
-  <td></td>
- </tr>
- <tr>
-  <td>C00005</td>
-  <td>Sasikant</td>
-  <td>Mumbai</td>
-  <td>Mumbai</td>
-  <td>India</td>
-  <td>NULL</td>
-  <td>7000.00</td>
-  <td>11000.00</td>
-  <td>7000.00</td>
-  <td>11000.00</td>
-  <td></td>
-  <td>A002</td>
-  <td></td>
- </tr>
- <tr>
-  <td>C00006</td>
-  <td>Shilton</td>
-  <td>Torento</td>
-  <td>Torento</td>
-  <td>Canada</td>
-  <td>NULL</td>
-  <td>10000.00</td>
-  <td>7000.00</td>
-  <td>6000.00</td>
-  <td>11000.00</td>
-  <td></td>
-  <td>A004</td>
-  <td></td>
- </tr>
- <tr>
-  <td>C00007</td>
-  <td>Ramanathan</td>
-  <td>Chennai</td>
-  <td>Chennai</td>
-  <td>India</td>
-  <td>NULL</td>
-  <td>7000.00</td>
-  <td>11000.00</td>
-  <td>9000.00</td>
-  <td>9000.00</td>
-  <td></td>
-  <td>A010</td>
-  <td></td>
- </tr>
- <tr>
-  <td>C00008</td>
-  <td>Karolina</td>
-  <td>Torento</td>
-  <td>Torento</td>
-  <td>Canada</td>
-  <td>NULL</td>
-  <td>7000.00</td>
-  <td>7000.00</td>
-  <td>9000.00</td>
-  <td>5000.00</td>
-  <td></td>
-  <td>A004</td>
-  <td></td>
- </tr>
- <tr>
-  <td>C00009</td>
-  <td>Ramesh</td>
-  <td>Mumbai</td>
-  <td>Mumbai</td>
-  <td>India</td>
-  <td>NULL</td>
-  <td>8000.00</td>
-  <td>7000.00</td>
-  <td>3000.00</td>
-  <td>12000.00</td>
-  <td></td>
-  <td>A002</td>
-  <td></td>
- </tr>
- <tr>
-  <td>C00010</td>
-  <td>Charles</td>
-  <td>Hampshair</td>
-  <td>Hampshair</td>
-  <td>UK</td>
-  <td>NULL</td>
-  <td>6000.00</td>
-  <td>4000.00</td>
-  <td>5000.00</td>
-  <td>5000.00</td>
-  <td></td>
-  <td>A009</td>
-  <td></td>
- </tr>
- <tr>
-  <td>C00011</td>
-  <td>Sundariya</td>
-  <td>Chennai</td>
-  <td>Chennai</td>
-  <td>India</td>
-  <td>NULL</td>
-  <td>7000.00</td>
-  <td>11000.00</td>
-  <td>7000.00</td>
-  <td>11000.00</td>
-  <td></td>
-  <td>A010</td>
-  <td></td>
- </tr>
- <tr>
-  <td>C00012</td>
-  <td>Steven</td>
-  <td>San Jose</td>
-  <td>San Jose</td>
-  <td>USA</td>
-  <td>NULL</td>
-  <td>5000.00</td>
-  <td>7000.00</td>
-  <td>9000.00</td>
-  <td>3000.00</td>
-  <td></td>
-  <td>A012</td>
-  <td></td>
- </tr>
- <tr>
-  <td>C00013</td>
-  <td>Holmes</td>
-  <td>London</td>
-  <td>London</td>
-  <td>UK</td>
-  <td>NULL</td>
-  <td>6000.00</td>
-  <td>5000.00</td>
-  <td>7000.00</td>
-  <td>4000.00</td>
-  <td></td>
-  <td>A003</td>
-  <td></td>
- </tr>
- <tr>
-  <td>C00014</td>
-  <td>Rangarappa</td>
-  <td>Bangalore</td>
-  <td>Bangalore</td>
-  <td>India</td>
-  <td>NULL</td>
-  <td>8000.00</td>
-  <td>11000.00</td>
-  <td>7000.00</td>
-  <td>12000.00</td>
-  <td></td>
-  <td>A001</td>
-  <td></td>
- </tr>
- <tr>
-  <td>C00015</td>
-  <td>Stuart</td>
-  <td>London</td>
-  <td>London</td>
-  <td>UK</td>
-  <td>NULL</td>
-  <td>6000.00</td>
-  <td>8000.00</td>
-  <td>3000.00</td>
-  <td>11000.00</td>
-  <td></td>
-  <td>A003</td>
-  <td></td>
- </tr>
- <tr>
-  <td>C00016</td>
-  <td>Venkatpati</td>
-  <td>Bangalore</td>
-  <td>Bangalore</td>
-  <td>India</td>
-  <td>NULL</td>
-  <td>8000.00</td>
-  <td>11000.00</td>
-  <td>7000.00</td>
-  <td>12000.00</td>
-  <td></td>
-  <td>A007</td>
-  <td></td>
- </tr>
- <tr>
-  <td>C00017</td>
-  <td>Srinivas</td>
-  <td>Bangalore</td>
-  <td>Bangalore</td>
-  <td>India</td>
-  <td>NULL</td>
-  <td>8000.00</td>
-  <td>4000.00</td>
-  <td>3000.00</td>
-  <td>9000.00</td>
-  <td></td>
-  <td>A007</td>
-  <td></td>
- </tr>
- <tr>
-  <td>C00018</td>
-  <td>Fleming</td>
-  <td>Brisban</td>
-  <td>Brisban</td>
-  <td>Australia</td>
-  <td>NULL</td>
-  <td>7000.00</td>
-  <td>7000.00</td>
-  <td>9000.00</td>
-  <td>5000.00</td>
-  <td></td>
-  <td>A005</td>
-  <td></td>
- </tr>
- <tr>
-  <td>C00019</td>
-  <td>Yearannaidu</td>
-  <td>Chennai</td>
-  <td>Chennai</td>
-  <td>India</td>
-  <td>NULL</td>
-  <td>8000.00</td>
-  <td>7000.00</td>
-  <td>7000.00</td>
-  <td>8000.00</td>
-  <td></td>
-  <td>A010</td>
-  <td></td>
- </tr>
- <tr>
-  <td>C00020</td>
-  <td>Albert</td>
-  <td>New York</td>
-  <td>New York</td>
-  <td>USA</td>
-  <td>NULL</td>
-  <td>5000.00</td>
-  <td>7000.00</td>
-  <td>6000.00</td>
-  <td>6000.00</td>
-  <td></td>
-  <td>A008</td>
-  <td></td>
- </tr>
- <tr>
-  <td>C00021</td>
-  <td>Jacks</td>
-  <td>Brisban<</td>
-  <td>Brisban</td>
-  <td>Australia</td>
-  <td>NULL</td>
-  <td>7000.00</td>
-  <td>7000.00</td>
-  <td>7000.00</td>
-  <td>7000.00</td>
-  <td></td>
-  <td>A005</td>
-  <td></td>
- </tr>
- <tr>
-  <td>C00022</td>
-  <td>Avinash</td>
-  <td>Mumbai</td>
-  <td>Mumbai</td>
-  <td>India</td>
-  <td>NULL</td>
-  <td>7000.00</td>
-  <td>11000.00</td>
-  <td>9000.00</td>
-  <td>9000.00</td>
-  <td></td>
-  <td>A002</td>
-  <td></td>
- </tr>
- <tr>
-  <td>C00023</td>
-  <td>Karl</td>
-  <td>London</td>
-  <td>London</td>
-  <td>UK</td>
-  <td>NULL</td>
-  <td>4000.00</td>
-  <td>6000.00</td>
-  <td>7000.00</td>
-  <td>3000.00</td>
-  <td></td>
-  <td>A006</td>
-  <td></td>
- </tr>
- <tr>
-  <td>C00024</td>
-  <td>Cook</td>
-  <td>London</td>
-  <td>London</td>
-  <td>UK</td>
-  <td>NULL</td>
-  <td>4000.00</td>
-  <td>9000.00</td>
-  <td>7000.00</td>
-  <td>6000.00</td>
-  <td></td>
-  <td>A006</td>
-  <td></td>
- </tr>
- <tr>
-  <td>C00025</td>
-  <td>Ravindran</td>
-  <td>Bangalore</td>
-  <td>Bangalore</td>
-  <td>India</td>
-  <td>NULL</td>
-  <td>5000.00</td>
-  <td>7000.00</td>
-  <td>4000.00</td>
-  <td>8000.00</td>
-  <td></td>
-  <td>A011</td>
-  <td></td>
- </tr>
-	</tbody>
-</table>
+        <table border="1px">
+          <thead style="font-size: small;">
+            <tr>
+              <th>CUST_CODE</th>
+              <th>CUST_NAME</th>
+              <th>CUST_CITY</th>
+              <th>WORKING_AREA</th>
+              <th>CUST_COUNTRY</th>
+              <th>GRADE</th>
+              <th>OPENING_AMT</th>
+              <th>RECEIVE_AMT</th>
+              <th>PAYMENT_AMT</th>
+              <th>OUTSTANDING_AMT</th>
+              <th>PHONE_NO</th>
+              <th>AGENT_CODE</th>
+            </tr>
+          </thead>
+          <tbody style="font-size: small;">
+            <tr>
+              <td>C00001</td>
+              <td>Micheal</td>
+              <td>New York</td>
+              <td>New York</td>
+              <td>USA</td>
+              <td>NULL</td>
+              <td>3000.00</td>
+              <td>5000.00</td>
+              <td>2000.00</td>
+              <td>6000.00</td>
+              <td></td>
+              <td>A008</td>
+            </tr>
+            <tr>
+              <td>C00002</td>
+              <td>Bolt</td>
+              <td>New York</td>
+              <td>New York</td>
+              <td>USA</td>
+              <td>NULL</td>
+              <td>5000.00</td>
+              <td>7000.00</td>
+              <td>9000.00</td>
+              <td>3000.00</td>
+              <td></td>
+              <td>A008</td>
+            </tr>
+            <tr>
+              <td>C00003</td>
+              <td>Martin</td>
+              <td>Torento<< /td></td>
+              <td>Torento</td>
+              <td>Canada</td>
+              <td>NULL</td>
+              <td>8000.00</td>
+              <td>7000.00</td>
+              <td>7000.00</td>
+              <td>8000.00</td>
+              <td></td>
+              <td>A004</td>
+            </tr>
+            <tr>
+              <td>C00004</td>
+              <td>Winston</td>
+              <td>Brisban</td>
+              <td>Brisban</td>
+              <td>Australia</td>
+              <td>NULL</td>
+              <td>5000.00</td>
+              <td>8000.00</td>
+              <td>7000.00</td>
+              <td>6000.00</td>
+              <td></td>
+              <td>A005</td>
+            </tr>
+            <tr>
+              <td>C00005</td>
+              <td>Sasikant</td>
+              <td>Mumbai</td>
+              <td>Mumbai</td>
+              <td>India</td>
+              <td>NULL</td>
+              <td>7000.00</td>
+              <td>11000.00</td>
+              <td>7000.00</td>
+              <td>11000.00</td>
+              <td></td>
+              <td>A002</td>
+            </tr>
+            <tr>
+              <td>C00006</td>
+              <td>Shilton</td>
+              <td>Torento</td>
+              <td>Torento</td>
+              <td>Canada</td>
+              <td>NULL</td>
+              <td>10000.00</td>
+              <td>7000.00</td>
+              <td>6000.00</td>
+              <td>11000.00</td>
+              <td></td>
+              <td>A004</td>
+            </tr>
+            <tr>
+              <td>C00007</td>
+              <td>Ramanathan</td>
+              <td>Chennai</td>
+              <td>Chennai</td>
+              <td>India</td>
+              <td>NULL</td>
+              <td>7000.00</td>
+              <td>11000.00</td>
+              <td>9000.00</td>
+              <td>9000.00</td>
+              <td></td>
+              <td>A010</td>
+            </tr>
+            <tr>
+              <td>C00008</td>
+              <td>Karolina</td>
+              <td>Torento</td>
+              <td>Torento</td>
+              <td>Canada</td>
+              <td>NULL</td>
+              <td>7000.00</td>
+              <td>7000.00</td>
+              <td>9000.00</td>
+              <td>5000.00</td>
+              <td></td>
+              <td>A004</td>
+            </tr>
+            <tr>
+              <td>C00009</td>
+              <td>Ramesh</td>
+              <td>Mumbai</td>
+              <td>Mumbai</td>
+              <td>India</td>
+              <td>NULL</td>
+              <td>8000.00</td>
+              <td>7000.00</td>
+              <td>3000.00</td>
+              <td>12000.00</td>
+              <td></td>
+              <td>A002</td>
+            </tr>
+            <tr>
+              <td>C00010</td>
+              <td>Charles</td>
+              <td>Hampshair</td>
+              <td>Hampshair</td>
+              <td>UK</td>
+              <td>NULL</td>
+              <td>6000.00</td>
+              <td>4000.00</td>
+              <td>5000.00</td>
+              <td>5000.00</td>
+              <td></td>
+              <td>A009</td>
+            </tr>
+            <tr>
+              <td>C00011</td>
+              <td>Sundariya</td>
+              <td>Chennai</td>
+              <td>Chennai</td>
+              <td>India</td>
+              <td>NULL</td>
+              <td>7000.00</td>
+              <td>11000.00</td>
+              <td>7000.00</td>
+              <td>11000.00</td>
+              <td></td>
+              <td>A010</td>
+            </tr>
+            <tr>
+              <td>C00012</td>
+              <td>Steven</td>
+              <td>San Jose</td>
+              <td>San Jose</td>
+              <td>USA</td>
+              <td>NULL</td>
+              <td>5000.00</td>
+              <td>7000.00</td>
+              <td>9000.00</td>
+              <td>3000.00</td>
+              <td></td>
+              <td>A012</td>
+            </tr>
+            <tr>
+              <td>C00013</td>
+              <td>Holmes</td>
+              <td>London</td>
+              <td>London</td>
+              <td>UK</td>
+              <td>NULL</td>
+              <td>6000.00</td>
+              <td>5000.00</td>
+              <td>7000.00</td>
+              <td>4000.00</td>
+              <td></td>
+              <td>A003</td>
+            </tr>
+            <tr>
+              <td>C00014</td>
+              <td>Rangarappa</td>
+              <td>Bangalore</td>
+              <td>Bangalore</td>
+              <td>India</td>
+              <td>NULL</td>
+              <td>8000.00</td>
+              <td>11000.00</td>
+              <td>7000.00</td>
+              <td>12000.00</td>
+              <td></td>
+              <td>A001</td>
+            </tr>
+            <tr>
+              <td>C00015</td>
+              <td>Stuart</td>
+              <td>London</td>
+              <td>London</td>
+              <td>UK</td>
+              <td>NULL</td>
+              <td>6000.00</td>
+              <td>8000.00</td>
+              <td>3000.00</td>
+              <td>11000.00</td>
+              <td></td>
+              <td>A003</td>
+            </tr>
+            <tr>
+              <td>C00016</td>
+              <td>Venkatpati</td>
+              <td>Bangalore</td>
+              <td>Bangalore</td>
+              <td>India</td>
+              <td>NULL</td>
+              <td>8000.00</td>
+              <td>11000.00</td>
+              <td>7000.00</td>
+              <td>12000.00</td>
+              <td></td>
+              <td>A007</td>
+            </tr>
+            <tr>
+              <td>C00017</td>
+              <td>Srinivas</td>
+              <td>Bangalore</td>
+              <td>Bangalore</td>
+              <td>India</td>
+              <td>NULL</td>
+              <td>8000.00</td>
+              <td>4000.00</td>
+              <td>3000.00</td>
+              <td>9000.00</td>
+              <td></td>
+              <td>A007</td>
+            </tr>
+            <tr>
+              <td>C00018</td>
+              <td>Fleming</td>
+              <td>Brisban</td>
+              <td>Brisban</td>
+              <td>Australia</td>
+              <td>NULL</td>
+              <td>7000.00</td>
+              <td>7000.00</td>
+              <td>9000.00</td>
+              <td>5000.00</td>
+              <td></td>
+              <td>A005</td>
+            </tr>
+            <tr>
+              <td>C00019</td>
+              <td>Yearannaidu</td>
+              <td>Chennai</td>
+              <td>Chennai</td>
+              <td>India</td>
+              <td>NULL</td>
+              <td>8000.00</td>
+              <td>7000.00</td>
+              <td>7000.00</td>
+              <td>8000.00</td>
+              <td></td>
+              <td>A010</td>
+            </tr>
+            <tr>
+              <td>C00020</td>
+              <td>Albert</td>
+              <td>New York</td>
+              <td>New York</td>
+              <td>USA</td>
+              <td>NULL</td>
+              <td>5000.00</td>
+              <td>7000.00</td>
+              <td>6000.00</td>
+              <td>6000.00</td>
+              <td></td>
+              <td>A008</td>
+            </tr>
+            <tr>
+              <td>C00021</td>
+              <td>Jacks</td>
+              <td>Brisban<< /td></td>
+              <td>Brisban</td>
+              <td>Australia</td>
+              <td>NULL</td>
+              <td>7000.00</td>
+              <td>7000.00</td>
+              <td>7000.00</td>
+              <td>7000.00</td>
+              <td></td>
+              <td>A005</td>
+            </tr>
+            <tr>
+              <td>C00022</td>
+              <td>Avinash</td>
+              <td>Mumbai</td>
+              <td>Mumbai</td>
+              <td>India</td>
+              <td>NULL</td>
+              <td>7000.00</td>
+              <td>11000.00</td>
+              <td>9000.00</td>
+              <td>9000.00</td>
+              <td></td>
+              <td>A002</td>
+            </tr>
+            <tr>
+              <td>C00023</td>
+              <td>Karl</td>
+              <td>London</td>
+              <td>London</td>
+              <td>UK</td>
+              <td>NULL</td>
+              <td>4000.00</td>
+              <td>6000.00</td>
+              <td>7000.00</td>
+              <td>3000.00</td>
+              <td></td>
+              <td>A006</td>
+            </tr>
+            <tr>
+              <td>C00024</td>
+              <td>Cook</td>
+              <td>London</td>
+              <td>London</td>
+              <td>UK</td>
+              <td>NULL</td>
+              <td>4000.00</td>
+              <td>9000.00</td>
+              <td>7000.00</td>
+              <td>6000.00</td>
+              <td></td>
+              <td>A006</td>
+            </tr>
+            <tr>
+              <td>C00025</td>
+              <td>Ravindran</td>
+              <td>Bangalore</td>
+              <td>Bangalore</td>
+              <td>India</td>
+              <td>NULL</td>
+              <td>5000.00</td>
+              <td>7000.00</td>
+              <td>4000.00</td>
+              <td>8000.00</td>
+              <td></td>
+              <td>A011</td>
+            </tr>
+          </tbody>
+        </table>
 
-
-
-<p>Here is the script:</p>
-<blockquote>DECLARE @TableName NVARCHAR(255) = 'CUSTOMER';<BR>
-<BR>
-DECLARE @ColumnName NVARCHAR(255), @SQL NVARCHAR(MAX) = '';<BR>
-<BR>
-DECLARE ColumnCursor CURSOR FOR<BR>
-SELECT c.name<BR>
-FROM sys.columns c<BR>
-INNER JOIN sys.tables t ON c.object_id = t.object_id<BR>
-WHERE t.name = @TableName<BR>
-<BR>
-OPEN ColumnCursor;<BR>
-<BR>
-FETCH NEXT FROM ColumnCursor INTO @ColumnName;<BR>
-<BR>
-WHILE @@FETCH_STATUS = 0<BR>
-BEGIN<BR>
-    &#8195; SET @SQL = 'IF NOT EXISTS (SELECT 1 FROM ' + @TableName + ' WHERE LEN([' + @ColumnName + ']) > 0) PRINT ''' + @ColumnName + '''';<BR>
-<BR>
-    &#8195; EXEC sp_executesql @SQL;<BR>
-<BR>
-    &#8195; FETCH NEXT FROM ColumnCursor INTO @ColumnName;<BR>
-END<BR>
-<BR>
-CLOSE ColumnCursor;<BR>
-<BR>
-DEALLOCATE ColumnCursor;</blockquote>
-<p>And here is the result from running the script. You can see the two columns with NULL and empty values listed:</p>
-<p><a href="./media/result.jpg"><img src="./media/result.jpg" alt="Results of the SQL Script"></a></p>
-<p>There are, of course, many ways to solve this problem, but this solution works, so I'll stick with this.</p>
-<p>I have tested and verified this script on Microsoft SQL Server versions 2008, 2012, 2014, 2016, 2017, and 2019.</p>
-</div>
-
-
-</body></html>
+        <p>Here is the script:</p>
+        <pre
+          data-lang="bash"
+          class="language-bash"
+        ><code class="language-bash" data-lang="bash">DECLARE @TableName NVARCHAR(255) = 'CUSTOMER';
+        <BR>DECLARE @ColumnName NVARCHAR(255), @SQL NVARCHAR(MAX) = '';
+        <BR>DECLARE ColumnCursor CURSOR FOR<br>  SELECT c.name<br>  FROM sys.columns c<br>  INNER JOIN sys.tables t ON c.object_id = t.object_id<br>  WHERE t.name = @TableName
+        <BR>OPEN ColumnCursor;
+        <BR>FETCH NEXT FROM ColumnCursor INTO @ColumnName;
+        <BR>WHILE @@FETCH_STATUS = 0
+        <bR>BEGIN<bR>  SET @SQL = 'IF NOT EXISTS (SELECT 1 FROM ' + @TableName + ' WHERE LEN([' + @ColumnName + ']) > 0) PRINT ''' + @ColumnName + '''';
+        <BR>  EXEC sp_executesql @SQL;
+        <BR>  FETCH NEXT FROM ColumnCursor INTO @ColumnName;<BR>END
+        <BR>CLOSE ColumnCursor;
+        <BR>DEALLOCATE ColumnCursor;
+      </code></pre>
+        <p>
+          And here is the result from running the script. You can see the two
+          columns with NULL and empty values listed:
+        </p>
+        <p>
+          <a href="./media/result.jpg"
+            ><img src="./media/result.jpg" alt="Results of the SQL Script"
+          /></a>
+        </p>
+        <p>
+          There are, of course, many ways to solve this problem, but this
+          solution works, so I'll stick with this.
+        </p>
+        <p>
+          I have tested and verified this script on Microsoft SQL Server
+          versions 2008, 2012, 2014, 2016, 2017, and 2019.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

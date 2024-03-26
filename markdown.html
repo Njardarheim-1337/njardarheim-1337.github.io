@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <!--
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 88888888888888888888888888888888888888888888888888888
@@ -29,75 +29,106 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 """""""""""""""""""' `"""""""""' `"""""""""""""""""""
 -->
 <html lang="en">
+
 <head>
-<link rel="stylesheet" href="./inc/style.css">
-<title>GOTO 10</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="./inc/style.css" />
+	<title>GOTO 10</title>
 </head>
+
 <body>
-<hr>
-<div id="header">
-	</B>
-	<!--
+	<div class="heading">
+		<h1>
+			<!--
 	 1 space : &nbsp;
 	 2 spaces : &ensp;
 	 4 spaces : &emsp;
 	-->
-		&emsp; &gt; 10 PRINT "Hello World"<BR>
-		&emsp; &gt; 20 GOTO 10<BR>
-		&emsp; &gt; RUN<BR>
-		&emsp; &gt; Hello World<BR>
-		&emsp; &gt; Hello World<BR>
-	</B>
-</div>
-<hr>
-<div id="menu">
-  <H3>
-	<a href="./index.html">[Home]</a> 
-	<!--
+			&emsp; &gt; 10 PRINT "Hello World"<br />
+			&emsp; &gt; 20 GOTO 10<br />
+			&emsp; &gt; RUN<br />
+			&emsp; &gt; Hello World<br />
+			&emsp; &gt; Hello World<br />
+		</h1>
+	</div>
+
+	<div class="content">
+		<div id="menu">
+			<h3>
+				<a href="./index.html">[Home]</a>
+				<!--
   <a href="">[Misc]</a> 
 	<a href="">[Linux]</a> 
 	<a href="">[Cybersecurity]</a>
   -->
-</H2>
-</div>
-<BR>
-<div id="body">
-  <DIV>
+			</h3>
+		</div>
+		<br />
+		<div id="body">
+			<h1>How I run this site - part 3 of 7 - Markdown</h1>
+			<p><i>7 December 2020</i></p>
+			<p>
+				When I started thinking about how I would run this website, my main
+				thought was that this should be as simple as possible and in a format
+				that was permanent and simple, as well as platform and application
+				independent. And should be readable.<br />
+				<br />
+				A Microsoft Word document, for example, is readable and simple, but it
+				is bound to Microsoft Word and is not readable by other incompatible
+				applications.<br />
+				<br />
+				An ordinary text file would thus be permanent and simple. And
+				absolutely platform and application independent. A text file will for
+				all (imaginable) future be readable by a number of applications on all
+				thinkable platforms.<br />
+				<br />
+				The problem with a text file is in the web context that it does not
+				contain any formatting.<br />
+				<br />
+				On the other hand, I might have written my text directly in a document
+				in HTML format. But it will then be difficult to read, for example, in
+				a text editor. An HTML file contains lots of meta tags that make the
+				document less readable.<br />
+				<br />
+				I wanted a combination of these. A text document where I can write in
+				normal language without thinking about tags, which is very readable
+				and which is permanent. But that can be easily transferred to HTML for
+				web.<br />
+				<br />
+				The solution is called Markdown.<br />
+				<br />
+				Markdown is a lightweight markup language with plain-text-formatting
+				syntax, created in 2004 by John Gruber and Aaron Swartz. Markdown is
+				often used for formatting readme files, for writing messages in online
+				discussion forums, and to create rich text using a plain text
+				editor.<br />
+				Learn more about
+				<a href="https://en.wikipedia.org/wiki/Markdown">Markdown at Wikipedia</a>.<br />
+				<br />
+				Instead of writing:<br />
+			</p>
 
-  <H1>How I run this site - part 3 of 7 - Markdown</H1>
-      <P><I>7 December 2020</I></P>
-          <P>When I started thinking about how I would run this website, my main thought was that this should be as simple as possible and in a format that was permanent and simple, as well as platform and application independent. And should be readable.<BR>
-	  <br>
-	  A Microsoft Word document, for example, is readable and simple, but it is bound to Microsoft Word and is not readable by other incompatible applications.<br>
-	  <br>
-	  An ordinary text file would thus be permanent and simple. And absolutely platform and application independent. A text file will for all (imaginable) future be readable by a number of applications on all thinkable platforms.<br>
-	  <br>
-	  The problem with a text file is in the web context that it does not contain any formatting.<br>
-	  <br>
-	  On the other hand, I might have written my text directly in a document in HTML format. But it will then be difficult to read, for example, in a text editor. An HTML file contains lots of meta tags that make the document less readable.<br>
-	  <br>
-	  I wanted a combination of these. A text document where I can write in normal language without thinking about tags, which is very readable and which is permanent. But that can be easily transferred to HTML for web.<br>
-	  <br>
-	  The solution is called Markdown.<br>
-	  <br>
-	  Markdown is a lightweight markup language with plain-text-formatting syntax, created in 2004 by John Gruber and Aaron Swartz. Markdown is often used for formatting readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor.<br>
-	  Learn more about <a href="https://en.wikipedia.org/wiki/Markdown">Markdown at Wikipedia</A>.<br>
-	  <br>
-	  Instead of writing:<br>
-	  <blockquote>&lt;H1&gt; This is a headline &lt;/H1&gt;</blockquote>
-	  <br>
-	  You simply write:<br>
-	  <blockquote>This is a headline<br>
-		  =================</blockquote>
-	  <br>
-	  This means that the regular text file contains formatted text without the use of HTML tags, which makes it very readable and transferable.<br>
-	  <br>
-	  Markdown is maintained and explained with good documentation on the <a href="https://daringfireball.net/projects/markdown/">website of John Gruber: Daring Fireball - Markdown.</a><br>
-	  <br>
-	  <br>
-	  In part 4 of this series I will explain how I can easily get this text file transformed into an HTML document for web publication.</P>
-	    </DIV>
-
-</div>
+			<pre data-lang="bash"
+				class="language-bash"><code class="language-bash" data-lang="bash">&lt;H1&gt; This is a headline &lt;/H1&gt;</code></pre>
+			<br />
+			You simply write:<br />
+			<pre data-lang="bash"
+				class="language-bash"><code class="language-bash" data-lang="bash">This is a headline<br>==================</code></pre>
+			<br />
+			This means that the regular text file contains formatted text without
+			the use of HTML tags, which makes it very readable and transferable.<br />
+			<br />
+			Markdown is maintained and explained with good documentation on the
+			<a href="https://daringfireball.net/projects/markdown/">website of John Gruber: Daring Fireball -
+				Markdown.</a><br />
+			<br />
+			<br />
+			In part 4 of this series I will explain how I can easily get this text
+			file transformed into an HTML document for web publication.
+		</div>
+	</div>
 </body>
+
 </html>
