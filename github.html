@@ -1,4 +1,15 @@
 <!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta http-equiv="content-security-policy" content="default-src 'self'">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./inc/style.css">
+	<title>GOTO 10</title>
+</head>
+
 <!--
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 88888888888888888888888888888888888888888888888888888
@@ -28,15 +39,6 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 88888888888888888888888888a88888888888888888888888888
 """""""""""""""""""' `"""""""""' `"""""""""""""""""""
 -->
-<html lang="en">
-
-<head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" href="./inc/style.css" />
-	<title>GOTO 10</title>
-</head>
 
 <body>
 	<div class="heading">
@@ -46,11 +48,11 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 	 2 spaces : &ensp;
 	 4 spaces : &emsp;
 	-->
-			&emsp; &gt; 10 PRINT "Hello World"<br />
-			&emsp; &gt; 20 GOTO 10<br />
-			&emsp; &gt; RUN<br />
-			&emsp; &gt; Hello World<br />
-			&emsp; &gt; Hello World<br />
+			&emsp; &gt; 10 PRINT "Hello World"<br>
+			&emsp; &gt; 20 GOTO 10<br>
+			&emsp; &gt; RUN<br>
+			&emsp; &gt; Hello World<br>
+			&emsp; &gt; Hello World<br>
 		</h1>
 	</div>
 
@@ -65,134 +67,134 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
   -->
 			</h3>
 		</div>
-		<br />
+		<br>
 		<div id="body">
 			<h1>How I run this site - part 2 of 7 - GitHub</h1>
 			<p><i>20 November 2020</i></p>
 			<p>
-				So how do I manage files and versions?<br />
-				<br />
-				I work from several different computers from different places.<br />
+				So how do I manage files and versions?<br>
+				<br>
+				I work from several different computers from different places.<br>
 				It is always a challenge to know how to always work with the latest
 				version of a file. How to keep everything up to date on all
-				computers.<br />
+				computers.<br>
 				Additionally, you may want to save different versions of files for
-				recordkeeping.<br />
-				<br />
-				The simple and obvious choice is to use Git implemented by GitHub.<br />
+				recordkeeping.<br>
+				<br>
+				The simple and obvious choice is to use Git implemented by GitHub.<br>
 				Learn more about
 				<a href="https://en.wikipedia.org/wiki/Git">Git at Wikipedia</a>.
 				GitHub is free for personal projects, and you find it at
-				<a href="https://github.com/">github.com</a><br />
-				<br />
+				<a href="https://github.com/">github.com</a><br>
+				<br>
 				You then have a centralized repository with all the files in the
-				latest version and earlier versions.<br />
-				<br />
+				latest version and earlier versions.<br>
+				<br>
 				GitHub is easy to use, and you do not need many commands to work with
-				it.<br />
+				it.<br>
 				Github is available for most platforms; Windows, Mac and Linux. I run
-				all these operating systems myself.<br />
-				<br />
+				all these operating systems myself.<br>
+				<br>
 				After creating a free user profile on GitHub, you can create a
-				project.<br />
-				<br />
+				project.<br>
+				<br>
 				To set it up on a new computer, navigate to the desired directory in
-				the terminal and type:<br />
+				the terminal and type:<br>
 			</p>
 
 			<pre data-lang="bash"
 				class="language-bash"><code class="language-bash" data-lang="bash">git clone "url to project"</code></pre>
-			For example:<br />
+			For example:<br>
 			<pre data-lang="bash"
 				class="language-bash"><code class="language-bash" data-lang="bash">git clone https://github.com/github/training-kit.git			</code></pre>
-			<br />
-			This downloads all files with the defined directory structure.<br />
-			<br />
+			<br>
+			This downloads all files with the defined directory structure.<br>
+			<br>
 			Next time you work on the project, go to the same directory and just
-			type in the terminal:<br />
+			type in the terminal:<br>
 			<pre data-lang="bash"
 				class="language-bash"><code class="language-bash" data-lang="bash">git pull</code></pre>
-			That's it! Now your local repository is 100% in sync.<br />
-			<br />
+			That's it! Now your local repository is 100% in sync.<br>
+			<br>
 			When you have finished working on the files and want them uploaded to
 			the GitHub repository, you need to commit the files and then upload
-			them.<br />
+			them.<br>
 			Since I work alone with this website, I do not have to think about
-			whether others have checked out files etc.<br />
-			<br />
-			You can do this in (at least) three different ways.<br />
+			whether others have checked out files etc.<br>
+			<br>
+			You can do this in (at least) three different ways.<br>
 			<h2>1. Manually in the terminal</h2>
 			As before, navigate to your local GitHub directory in the terminal and
-			type:<br />
+			type:<br>
 			<pre data-lang="bash"
-				class="language-bash"><code class="language-bash" data-lang="bash">git add.<br />git commit -m "your message here"<br />git push</code></pre>
-			<br />
-			<br />
+				class="language-bash"><code class="language-bash" data-lang="bash">git add.<br>git commit -m "your message here"<br>git push</code></pre>
+			<br>
+			<br>
 			<h2>2. Create a bash script</h2>
 			To avoid writing all three "add", "commit" and "push" each time, create
-			a simple bash script or create an alias (see bulletpoint 3 below).<br />
-			<br />
-			Open the terminal and type:<br />
+			a simple bash script or create an alias (see bulletpoint 3 below).<br>
+			<br>
+			Open the terminal and type:<br>
 			<pre data-lang="bash"
-				class="language-bash"><code class="language-bash" data-lang="bash">touch gitpush.sh<br />vim gitpush.sh</code></pre>
-			<br />
-			In Vim: Press I for insert mode and type these four lines:<br />
+				class="language-bash"><code class="language-bash" data-lang="bash">touch gitpush.sh<br>vim gitpush.sh</code></pre>
+			<br>
+			In Vim: Press I for insert mode and type these four lines:<br>
 			<pre data-lang="bash"
-				class="language-bash"><code class="language-bash" data-lang="bash">#!/bin/bash<br />git add.<br />git commit -m "'$ *'"<br />git push</code></pre>
-			<br />
-			Press Esc, then press :wq (to write and quit).<br />
-			<br />
-			And then make the file executable with:<br />
+				class="language-bash"><code class="language-bash" data-lang="bash">#!/bin/bash<br>git add.<br>git commit -m "'$ *'"<br>git push</code></pre>
+			<br>
+			Press Esc, then press :wq (to write and quit).<br>
+			<br>
+			And then make the file executable with:<br>
 			<pre data-lang="bash"
 				class="language-bash"><code class="language-bash" data-lang="bash">chmod +x gitpush.sh</code></pre>
-			<br />
+			<br>
 			Put the file in a directory located in your path. For example the /bin
-			directory.<br />
-			<br />
-			Then just type:<br />
+			directory.<br>
+			<br>
+			Then just type:<br>
 			<pre data-lang="bash"
 				class="language-bash"><code class="language-bash" data-lang="bash">./gitpush.sh My comment for this version</code></pre>
-			<br />
+			<br>
 			<h2>3. Make an alias</h2>
-			This is the way I roll.<br />
-			Most people have their aliases in either ~/.bashrc or ~/.bash_aliases<br />
-			<br />
-			Open the file as follows:<br />
+			This is the way I roll.<br>
+			Most people have their aliases in either ~/.bashrc or ~/.bash_aliases<br>
+			<br>
+			Open the file as follows:<br>
 			<pre data-lang="bash"
 				class="language-bash"><code class="language-bash" data-lang="bash">vim ~/.bash_aliases</code></pre>
-			<br />
-			In Vim:<br />
-			Press I for Insert mode and type these lines:<br />
+			<br>
+			In Vim:<br>
+			Press I for Insert mode and type these lines:<br>
 			<pre data-lang="bash"
-				class="language-bash"><code class="language-bash" data-lang="bash">gitpush_function () {<br />&emsp;&emsp;&emsp; git add.<br />&emsp;&emsp;&emsp; git commit -m "$ *"<br />&emsp;&emsp;&emsp; git push<br />}<br />alias gitpush = gitpush_function</code></pre>
-			<br />
-			Press Esc, then press :wq (to write and quit).<br />
-			<br />
-			To get the new alias valid, type in the terminal:<br />
+				class="language-bash"><code class="language-bash" data-lang="bash">gitpush_function () {<br>&emsp;&emsp;&emsp; git add.<br>&emsp;&emsp;&emsp; git commit -m "$ *"<br>&emsp;&emsp;&emsp; git push<br>}<br>alias gitpush = gitpush_function</code></pre>
+			<br>
+			Press Esc, then press :wq (to write and quit).<br>
+			<br>
+			To get the new alias valid, type in the terminal:<br>
 			<pre data-lang="bash"
 				class="language-bash"><code class="language-bash" data-lang="bash">source ~/.bashrc</code></pre>
-			<br />
-			So in the future you now just write:<br />
+			<br>
+			So in the future you now just write:<br>
 			<pre data-lang="bash"
 				class="language-bash"><code class="language-bash" data-lang="bash">gitpush My comment for this version</code></pre>
-			<br />
-			<br />
-			<br />
-			<b>That was it!</b><br />
-			<br />
+			<br>
+			<br>
+			<br>
+			<b>That was it!</b><br>
+			<br>
 			PS! You can find simple explanations of all the Git commands here:
-			<a href="https://github.com/git-guides/">Git Guides</a><br />
-			<br />
+			<a href="https://github.com/git-guides/">Git Guides</a><br>
+			<br>
 			The next time I have to work with the web pages - no matter which
 			computer - I run the same routine. Starts the computer, opens the
-			terminal and navigates to my git directory, and then "git pull".<br />
-			<br />
-			Do the work I'm going to do.<br />
-			<br />
+			terminal and navigates to my git directory, and then "git pull".<br>
+			<br>
+			Do the work I'm going to do.<br>
+			<br>
 			And then I finish my work by just typing "gitpush This is my
-			comment".<br />
-			<br />
-			<br />
+			comment".<br>
+			<br>
+			<br>
 			This was part 2 of 7. Have you read
 			<a href="./philosophy.html">part 1</a>? Part 3 is coming soon and will
 			cover how I write my text.
